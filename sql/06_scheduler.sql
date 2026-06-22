@@ -1,0 +1,10 @@
+BEGIN
+DBMS_SCHEDULER.CREATE_JOB(
+job_name=>'FRAUD_SCAN_JOB',
+job_type=>'STORED_PROCEDURE',
+job_action=>'FRAUD_SCAN',
+repeat_interval=>'FREQ=MINUTELY;INTERVAL=5',
+enabled=>TRUE
+);
+END;
+/
